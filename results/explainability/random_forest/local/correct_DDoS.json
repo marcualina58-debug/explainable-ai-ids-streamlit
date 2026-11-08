@@ -1,0 +1,100 @@
+{
+  "case": "correct_DDoS",
+  "true_class": "DDoS",
+  "predicted_class": "DDoS",
+  "row_index": 188469,
+  "available": true,
+  "model": "Random Forest",
+  "class_probabilities": {
+    "BENIGN": 0.0,
+    "DDoS": 1.0,
+    "Brute Force": 0.0,
+    "Port Scan": 0.0
+  },
+  "expected_value_predicted_class": 0.05895000000000003,
+  "expected_value_true_class": 0.05895000000000003,
+  "top_positive_contributions": [
+    {
+      "feature": "Fwd Packet Length Max",
+      "shap_predicted_class": 0.08261794332414177
+    },
+    {
+      "feature": "Destination Port",
+      "shap_predicted_class": 0.06216513077656502
+    },
+    {
+      "feature": "Fwd Packet Length Mean",
+      "shap_predicted_class": 0.061517692626818866
+    },
+    {
+      "feature": "Avg Fwd Segment Size",
+      "shap_predicted_class": 0.061176098559920435
+    },
+    {
+      "feature": "Subflow Fwd Bytes",
+      "shap_predicted_class": 0.05389981855898029
+    },
+    {
+      "feature": "Total Length of Fwd Packets",
+      "shap_predicted_class": 0.04731886393029988
+    },
+    {
+      "feature": "min_seg_size_forward",
+      "shap_predicted_class": 0.03611382549638129
+    },
+    {
+      "feature": "Avg Bwd Segment Size",
+      "shap_predicted_class": 0.03604962022663237
+    },
+    {
+      "feature": "Subflow Bwd Bytes",
+      "shap_predicted_class": 0.034603887203639515
+    },
+    {
+      "feature": "Init_Win_bytes_backward",
+      "shap_predicted_class": 0.03328880334538756
+    }
+  ],
+  "top_negative_contributions": [
+    {
+      "feature": "Fwd IAT Std",
+      "shap_predicted_class": -0.0035261663748834236
+    },
+    {
+      "feature": "ACK Flag Count",
+      "shap_predicted_class": -0.0005312856766015984
+    },
+    {
+      "feature": "Idle Min",
+      "shap_predicted_class": -0.0001224026000545564
+    },
+    {
+      "feature": "Active Min",
+      "shap_predicted_class": -6.443362322329449e-05
+    },
+    {
+      "feature": "Idle Mean",
+      "shap_predicted_class": -2.8979704215998935e-05
+    },
+    {
+      "feature": "Idle Std",
+      "shap_predicted_class": -1.2320526875555516e-05
+    },
+    {
+      "feature": "ECE Flag Count",
+      "shap_predicted_class": 0.0
+    },
+    {
+      "feature": "Fwd URG Flags",
+      "shap_predicted_class": 0.0
+    },
+    {
+      "feature": "RST Flag Count",
+      "shap_predicted_class": 0.0
+    },
+    {
+      "feature": "Active Max",
+      "shap_predicted_class": 1.4088200741753098e-05
+    }
+  ]
+}

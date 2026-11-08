@@ -1,0 +1,50 @@
+{
+  "accuracy": 0.9930884943759317,
+  "macro_precision": 0.8552958002728049,
+  "macro_recall": 0.9967437737051739,
+  "macro_f1": 0.9002622126891985,
+  "weighted_f1": 0.9941311337798306,
+  "per_class": {
+    "BENIGN": {
+      "precision": 0.9998966060329177,
+      "recall": 0.9924369527291647,
+      "f1": 0.996152814242732,
+      "support": 419011
+    },
+    "DDoS": {
+      "precision": 0.9935536484020038,
+      "recall": 0.9992969573878061,
+      "f1": 0.9964170269112436,
+      "support": 25603
+    },
+    "Brute Force": {
+      "precision": 0.4505962521294719,
+      "recall": 0.9962335216572504,
+      "f1": 0.6205278592375366,
+      "support": 2124
+    },
+    "Port Scan": {
+      "precision": 0.9771366945268266,
+      "recall": 0.9990076630464745,
+      "f1": 0.9879511503652819,
+      "support": 18139
+    }
+  },
+  "experiment_type": "MLP_FINAL_BASELINE",
+  "training_time_seconds": 230.25299710000036,
+  "prediction_time_seconds": 1.027972800000498,
+  "epochs_completed": 25,
+  "best_epoch": 20,
+  "best_validation_loss": 0.024970298632979393,
+  "best_validation_accuracy": 0.9933261871337891,
+  "class_weights": {
+    "BENIGN": 0.2773653394464881,
+    "DDoS": 4.53932136269936,
+    "Brute Force": 54.72001700235417,
+    "Port Scan": 6.407186064318529
+  },
+  "training_rows": 1673557,
+  "validation_rows": 185951,
+  "testing_rows": 464877,
+  "feature_count": 65
+}

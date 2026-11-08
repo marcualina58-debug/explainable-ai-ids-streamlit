@@ -1,0 +1,100 @@
+{
+  "case": "correct_Port Scan",
+  "true_class": "Port Scan",
+  "predicted_class": "Port Scan",
+  "row_index": 317676,
+  "available": true,
+  "model": "MLP",
+  "class_probabilities": {
+    "BENIGN": 0.0002597291022539139,
+    "DDoS": 9.416748980584089e-08,
+    "Brute Force": 1.2940499516389536e-07,
+    "Port Scan": 0.9997400641441345
+  },
+  "expected_value_predicted_class": 0.04083430767059326,
+  "expected_value_true_class": 0.04083430767059326,
+  "top_positive_contributions": [
+    {
+      "feature": "Min Packet Length",
+      "shap_predicted_class": 0.7371163964271545
+    },
+    {
+      "feature": "ACK Flag Count",
+      "shap_predicted_class": 0.46640342473983765
+    },
+    {
+      "feature": "Bwd Packet Length Std",
+      "shap_predicted_class": 0.4043794572353363
+    },
+    {
+      "feature": "Avg Bwd Segment Size",
+      "shap_predicted_class": 0.27139994502067566
+    },
+    {
+      "feature": "Fwd Packet Length Min",
+      "shap_predicted_class": 0.22074902057647705
+    },
+    {
+      "feature": "URG Flag Count",
+      "shap_predicted_class": 0.2099224328994751
+    },
+    {
+      "feature": "Avg Fwd Segment Size",
+      "shap_predicted_class": 0.17931228876113892
+    },
+    {
+      "feature": "Down/Up Ratio",
+      "shap_predicted_class": 0.0759594589471817
+    },
+    {
+      "feature": "Total Length of Fwd Packets",
+      "shap_predicted_class": 0.06470504403114319
+    },
+    {
+      "feature": "act_data_pkt_fwd",
+      "shap_predicted_class": 0.06006990745663643
+    }
+  ],
+  "top_negative_contributions": [
+    {
+      "feature": "PSH Flag Count",
+      "shap_predicted_class": -0.9748726487159729
+    },
+    {
+      "feature": "Average Packet Size",
+      "shap_predicted_class": -0.1933380365371704
+    },
+    {
+      "feature": "Packet Length Std",
+      "shap_predicted_class": -0.15688155591487885
+    },
+    {
+      "feature": "Fwd Packet Length Std",
+      "shap_predicted_class": -0.14818550646305084
+    },
+    {
+      "feature": "Bwd Packet Length Max",
+      "shap_predicted_class": -0.08698678761720657
+    },
+    {
+      "feature": "Bwd Packet Length Min",
+      "shap_predicted_class": -0.06760985404253006
+    },
+    {
+      "feature": "Fwd Packet Length Mean",
+      "shap_predicted_class": -0.04202941060066223
+    },
+    {
+      "feature": "Bwd Packets/s",
+      "shap_predicted_class": -0.03330184519290924
+    },
+    {
+      "feature": "Fwd Packet Length Max",
+      "shap_predicted_class": -0.030004708096385002
+    },
+    {
+      "feature": "Max Packet Length",
+      "shap_predicted_class": -0.020913684740662575
+    }
+  ]
+}

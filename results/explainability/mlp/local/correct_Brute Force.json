@@ -1,0 +1,100 @@
+{
+  "case": "correct_Brute Force",
+  "true_class": "Brute Force",
+  "predicted_class": "Brute Force",
+  "row_index": 1535002,
+  "available": true,
+  "model": "MLP",
+  "class_probabilities": {
+    "BENIGN": 0.0018090072553604841,
+    "DDoS": 5.748450462306209e-07,
+    "Brute Force": 0.9981098175048828,
+    "Port Scan": 8.052563498495147e-05
+  },
+  "expected_value_predicted_class": 0.016423232853412628,
+  "expected_value_true_class": 0.016423232853412628,
+  "top_positive_contributions": [
+    {
+      "feature": "Min Packet Length",
+      "shap_predicted_class": 0.39752480387687683
+    },
+    {
+      "feature": "SYN Flag Count",
+      "shap_predicted_class": 0.23100456595420837
+    },
+    {
+      "feature": "Destination Port",
+      "shap_predicted_class": 0.17589503526687622
+    },
+    {
+      "feature": "Fwd Packet Length Min",
+      "shap_predicted_class": 0.12752580642700195
+    },
+    {
+      "feature": "Avg Fwd Segment Size",
+      "shap_predicted_class": 0.09717383235692978
+    },
+    {
+      "feature": "Bwd Packet Length Min",
+      "shap_predicted_class": 0.08717785775661469
+    },
+    {
+      "feature": "Average Packet Size",
+      "shap_predicted_class": 0.07609342783689499
+    },
+    {
+      "feature": "Packet Length Mean",
+      "shap_predicted_class": 0.055333688855171204
+    },
+    {
+      "feature": "Fwd Packet Length Mean",
+      "shap_predicted_class": 0.04655374959111214
+    },
+    {
+      "feature": "Fwd Packet Length Std",
+      "shap_predicted_class": 0.043224625289440155
+    }
+  ],
+  "top_negative_contributions": [
+    {
+      "feature": "Down/Up Ratio",
+      "shap_predicted_class": -0.09902927279472351
+    },
+    {
+      "feature": "Fwd Packet Length Max",
+      "shap_predicted_class": -0.06895072758197784
+    },
+    {
+      "feature": "ACK Flag Count",
+      "shap_predicted_class": -0.04548121616244316
+    },
+    {
+      "feature": "Bwd Packet Length Mean",
+      "shap_predicted_class": -0.018284911289811134
+    },
+    {
+      "feature": "Bwd Packet Length Max",
+      "shap_predicted_class": -0.01262828428298235
+    },
+    {
+      "feature": "Bwd IAT Total",
+      "shap_predicted_class": -0.012445036321878433
+    },
+    {
+      "feature": "URG Flag Count",
+      "shap_predicted_class": -0.012095561251044273
+    },
+    {
+      "feature": "Packet Length Variance",
+      "shap_predicted_class": -0.009542536921799183
+    },
+    {
+      "feature": "Bwd Packet Length Std",
+      "shap_predicted_class": -0.006153476890176535
+    },
+    {
+      "feature": "Subflow Fwd Bytes",
+      "shap_predicted_class": -0.0054363892413675785
+    }
+  ]
+}

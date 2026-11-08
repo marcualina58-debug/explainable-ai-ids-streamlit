@@ -1,0 +1,95 @@
+project:
+  name: Explainable AI for Multi-Attack Detection in Cloud Networks
+  random_seed: 42
+
+data:
+  raw_dir: data/raw
+  processed_dir: data/processed
+  processed_filename: cicids2017_four_class_clean.csv
+  label_column: null
+  target_column: target
+  csv_pattern: "*.csv"
+
+preprocessing:
+  remove_duplicates: true
+  missing_strategy: drop_rows
+  require_all_target_classes: true
+
+split:
+  test_size: 0.20
+  random_state: 42
+  stratify: true
+
+random_forest:
+  n_estimators: 200
+  random_state: 42
+  class_weight: balanced
+  n_jobs: -1
+  max_samples: null
+  # Verified against every processed row. These columns add no independent signal.
+  excluded_features:
+    - Fwd Header Length.1
+    - Subflow Fwd Packets
+    - Subflow Bwd Packets
+    - Fwd PSH Flags
+    - CWE Flag Count
+    - Bwd PSH Flags
+    - Bwd URG Flags
+    - Fwd Avg Bytes/Bulk
+    - Fwd Avg Packets/Bulk
+    - Fwd Avg Bulk Rate
+    - Bwd Avg Bytes/Bulk
+    - Bwd Avg Packets/Bulk
+    - Bwd Avg Bulk Rate
+
+cross_validation:
+  enabled: true
+  folds: 5
+  scoring: f1_macro
+  # Computationally constrained, reproducible stratified subset of X_train only.
+  # This must not be described as full-dataset cross-validation.
+  sample_size: 300000
+  n_estimators: 200
+
+mlp:
+  random_state: 42
+  validation_size: 0.10
+  hidden_units: [128, 64, 32]
+  dropout_rates: [0.30, 0.20]
+  batch_size: 1024
+  max_epochs: 50
+  early_stopping_patience: 5
+  reduce_lr_patience: 3
+  reduce_lr_factor: 0.5
+  min_learning_rate: 0.000001
+  optimizer: adam
+  loss: sparse_categorical_crossentropy
+  smoke_test:
+    max_training_rows: 50000
+    max_test_rows: 10000
+    max_epochs: 3
+
+explainability:
+  random_state: 42
+  rf_background_size: 200
+  rf_global_sample_size: 2000
+  mlp_background_size: 200
+  mlp_global_sample_size: 1000
+  class_conditional_per_class: 100
+  gradient_nsamples: 100
+  additivity_tolerance: 0.000001
+  smoke_test:
+    background_size: 20
+    rf_sample_size: 20
+    mlp_sample_size: 12
+    class_conditional_per_class: 2
+    gradient_nsamples: 20
+
+deployment:
+  # LOCAL preserves the complete offline demonstration. Set the
+  # STREAMLIT_DEPLOYMENT_MODE environment variable to CLOUD_DEMO for deployment.
+  mode: CLOUD_DEMO
+  cloud_demo:
+    sample_path: deployment_assets/cicids2017_cloud_demo_sample.csv
+    sampling_seed: 42
+    records_per_class: 25

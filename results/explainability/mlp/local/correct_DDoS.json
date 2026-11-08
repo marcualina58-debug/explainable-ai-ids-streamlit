@@ -1,0 +1,100 @@
+{
+  "case": "correct_DDoS",
+  "true_class": "DDoS",
+  "predicted_class": "DDoS",
+  "row_index": 188469,
+  "available": true,
+  "model": "MLP",
+  "class_probabilities": {
+    "BENIGN": 6.527519502697032e-08,
+    "DDoS": 0.9999992847442627,
+    "Brute Force": 2.2115664334576568e-14,
+    "Port Scan": 6.486258143922896e-07
+  },
+  "expected_value_predicted_class": 0.05769307166337967,
+  "expected_value_true_class": 0.05769307166337967,
+  "top_positive_contributions": [
+    {
+      "feature": "Packet Length Variance",
+      "shap_predicted_class": 0.1817339062690735
+    },
+    {
+      "feature": "Bwd Packet Length Std",
+      "shap_predicted_class": 0.17822283506393433
+    },
+    {
+      "feature": "Packet Length Std",
+      "shap_predicted_class": 0.11389331519603729
+    },
+    {
+      "feature": "PSH Flag Count",
+      "shap_predicted_class": 0.10364335775375366
+    },
+    {
+      "feature": "Average Packet Size",
+      "shap_predicted_class": 0.05975048989057541
+    },
+    {
+      "feature": "Down/Up Ratio",
+      "shap_predicted_class": 0.05157895013689995
+    },
+    {
+      "feature": "Bwd Packet Length Min",
+      "shap_predicted_class": 0.04499925673007965
+    },
+    {
+      "feature": "Init_Win_bytes_backward",
+      "shap_predicted_class": 0.03868729993700981
+    },
+    {
+      "feature": "Destination Port",
+      "shap_predicted_class": 0.030543364584445953
+    },
+    {
+      "feature": "URG Flag Count",
+      "shap_predicted_class": 0.029925351962447166
+    }
+  ],
+  "top_negative_contributions": [
+    {
+      "feature": "Bwd Packet Length Max",
+      "shap_predicted_class": -0.08028578758239746
+    },
+    {
+      "feature": "Max Packet Length",
+      "shap_predicted_class": -0.05078054592013359
+    },
+    {
+      "feature": "Init_Win_bytes_forward",
+      "shap_predicted_class": -0.024541648104786873
+    },
+    {
+      "feature": "ACK Flag Count",
+      "shap_predicted_class": -0.004806450102478266
+    },
+    {
+      "feature": "Bwd IAT Std",
+      "shap_predicted_class": -0.0036022344138473272
+    },
+    {
+      "feature": "Bwd IAT Max",
+      "shap_predicted_class": -0.002049178583547473
+    },
+    {
+      "feature": "Bwd IAT Mean",
+      "shap_predicted_class": -0.0007873360300436616
+    },
+    {
+      "feature": "Idle Max",
+      "shap_predicted_class": -0.000577950500883162
+    },
+    {
+      "feature": "Flow Bytes/s",
+      "shap_predicted_class": -0.0003034225373994559
+    },
+    {
+      "feature": "Active Max",
+      "shap_predicted_class": -0.00018145490321330726
+    }
+  ]
+}

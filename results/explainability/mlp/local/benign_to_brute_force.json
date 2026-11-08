@@ -1,0 +1,100 @@
+{
+  "case": "benign_to_brute_force",
+  "true_class": "BENIGN",
+  "predicted_class": "Brute Force",
+  "row_index": 2149841,
+  "available": true,
+  "model": "MLP",
+  "class_probabilities": {
+    "BENIGN": 0.03190666437149048,
+    "DDoS": 9.619289897955241e-08,
+    "Brute Force": 0.9678806662559509,
+    "Port Scan": 0.00021256739273667336
+  },
+  "expected_value_predicted_class": 0.016423232853412628,
+  "expected_value_true_class": 0.8850498199462891,
+  "top_positive_contributions": [
+    {
+      "feature": "Fwd IAT Std",
+      "shap_predicted_class": 0.1041569784283638
+    },
+    {
+      "feature": "Init_Win_bytes_forward",
+      "shap_predicted_class": 0.09878002107143402
+    },
+    {
+      "feature": "Min Packet Length",
+      "shap_predicted_class": 0.08476618677377701
+    },
+    {
+      "feature": "Destination Port",
+      "shap_predicted_class": 0.058236587792634964
+    },
+    {
+      "feature": "Bwd Packets/s",
+      "shap_predicted_class": 0.039318010210990906
+    },
+    {
+      "feature": "ACK Flag Count",
+      "shap_predicted_class": 0.0357392393052578
+    },
+    {
+      "feature": "Fwd Packet Length Min",
+      "shap_predicted_class": 0.03217269107699394
+    },
+    {
+      "feature": "Average Packet Size",
+      "shap_predicted_class": 0.030270524322986603
+    },
+    {
+      "feature": "Init_Win_bytes_backward",
+      "shap_predicted_class": 0.027507903054356575
+    },
+    {
+      "feature": "Flow IAT Std",
+      "shap_predicted_class": 0.023709163069725037
+    }
+  ],
+  "top_negative_contributions": [
+    {
+      "feature": "Down/Up Ratio",
+      "shap_predicted_class": -0.06747234612703323
+    },
+    {
+      "feature": "Flow IAT Max",
+      "shap_predicted_class": -0.024126816540956497
+    },
+    {
+      "feature": "URG Flag Count",
+      "shap_predicted_class": -0.019502734765410423
+    },
+    {
+      "feature": "Flow IAT Mean",
+      "shap_predicted_class": -0.019432125613093376
+    },
+    {
+      "feature": "PSH Flag Count",
+      "shap_predicted_class": -0.01784409023821354
+    },
+    {
+      "feature": "Packet Length Variance",
+      "shap_predicted_class": -0.011517009697854519
+    },
+    {
+      "feature": "Fwd Packets/s",
+      "shap_predicted_class": -0.010596057400107384
+    },
+    {
+      "feature": "Bwd Packet Length Mean",
+      "shap_predicted_class": -0.010402422398328781
+    },
+    {
+      "feature": "Fwd Packet Length Max",
+      "shap_predicted_class": -0.0097477613016963
+    },
+    {
+      "feature": "Bwd Packet Length Max",
+      "shap_predicted_class": -0.008950840681791306
+    }
+  ]
+}

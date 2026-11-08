@@ -1,0 +1,17 @@
+EXPLAINABILITY COMPARISON SUMMARY
+==================================
+
+Raw SHAP magnitudes are not compared directly because TreeExplainer and
+GradientExplainer use different algorithms and approximation assumptions.
+
+Global feature-rank Spearman rho: 0.3241258741258741
+Global feature-rank p-value: 0.008438440681871493
+Top-10 overlap count: 2
+Top-10 overlap: ['Init_Win_bytes_forward', 'PSH Flag Count']
+
+Destination Port ranks are reported in each model metadata file and the
+class-specific comparison CSV. The models relied on Destination Port for
+predictions; this is not evidence that Destination Port causes an attack.
+
+The selected MLP BENIGN→Brute Force local case is illustrative only and
+must not be generalized to every Brute Force false positive.

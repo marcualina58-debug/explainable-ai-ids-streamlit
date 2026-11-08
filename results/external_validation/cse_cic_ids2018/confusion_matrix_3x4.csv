@@ -1,0 +1,4 @@
+true_label,BENIGN,DDoS,Brute Force,Port Scan
+BENIGN,937838,0,5,0
+DDoS,200591,0,0,0
+Brute Force,94062,0,32,0

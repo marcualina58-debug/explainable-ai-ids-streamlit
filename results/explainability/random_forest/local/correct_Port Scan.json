@@ -1,0 +1,100 @@
+{
+  "case": "correct_Port Scan",
+  "true_class": "Port Scan",
+  "predicted_class": "Port Scan",
+  "row_index": 317676,
+  "available": true,
+  "model": "Random Forest",
+  "class_probabilities": {
+    "BENIGN": 0.0,
+    "DDoS": 0.0,
+    "Brute Force": 0.0,
+    "Port Scan": 1.0
+  },
+  "expected_value_predicted_class": 0.03771600792058581,
+  "expected_value_true_class": 0.03771600792058581,
+  "top_positive_contributions": [
+    {
+      "feature": "PSH Flag Count",
+      "shap_predicted_class": 0.12124782732774349
+    },
+    {
+      "feature": "Init_Win_bytes_forward",
+      "shap_predicted_class": 0.055925327160253495
+    },
+    {
+      "feature": "Packet Length Mean",
+      "shap_predicted_class": 0.05079056657447325
+    },
+    {
+      "feature": "Total Length of Fwd Packets",
+      "shap_predicted_class": 0.04209897900940184
+    },
+    {
+      "feature": "Flow Duration",
+      "shap_predicted_class": 0.03485434928118974
+    },
+    {
+      "feature": "ACK Flag Count",
+      "shap_predicted_class": 0.031469652154336246
+    },
+    {
+      "feature": "Average Packet Size",
+      "shap_predicted_class": 0.02743466531155544
+    },
+    {
+      "feature": "Subflow Fwd Bytes",
+      "shap_predicted_class": 0.027393127165039458
+    },
+    {
+      "feature": "Bwd Header Length",
+      "shap_predicted_class": 0.026326999406540354
+    },
+    {
+      "feature": "Bwd Packets/s",
+      "shap_predicted_class": 0.026237129671712607
+    }
+  ],
+  "top_negative_contributions": [
+    {
+      "feature": "Idle Min",
+      "shap_predicted_class": -8.896915803802586e-05
+    },
+    {
+      "feature": "Idle Max",
+      "shap_predicted_class": -8.179980001372655e-05
+    },
+    {
+      "feature": "Idle Mean",
+      "shap_predicted_class": -1.8831203819189567e-05
+    },
+    {
+      "feature": "Fwd URG Flags",
+      "shap_predicted_class": 0.0
+    },
+    {
+      "feature": "ECE Flag Count",
+      "shap_predicted_class": 0.0
+    },
+    {
+      "feature": "RST Flag Count",
+      "shap_predicted_class": 0.0
+    },
+    {
+      "feature": "Idle Std",
+      "shap_predicted_class": 1.4619407920690718e-06
+    },
+    {
+      "feature": "Active Std",
+      "shap_predicted_class": 2.2370870235590702e-05
+    },
+    {
+      "feature": "Active Max",
+      "shap_predicted_class": 0.00010315569956901526
+    },
+    {
+      "feature": "Active Mean",
+      "shap_predicted_class": 0.00011825681349840522
+    }
+  ]
+}

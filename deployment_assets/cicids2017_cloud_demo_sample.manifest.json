@@ -1,0 +1,15 @@
+{
+  "purpose": "CICIDS2017 cloud demonstration subset; not an evaluation dataset",
+  "sampling_method": "For each canonical class, retain the records with the smallest deterministic random keys generated while reading the processed dataset in source order. Selection does not use model predictions, confidence, correctness or SHAP results.",
+  "random_seed": 42,
+  "records_per_class": 25,
+  "total_records": 100,
+  "class_distribution": {
+    "BENIGN": 25,
+    "DDoS": 25,
+    "Brute Force": 25,
+    "Port Scan": 25
+  },
+  "feature_count": 65,
+  "target_column": "target"
+}

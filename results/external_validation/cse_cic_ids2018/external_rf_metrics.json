@@ -1,0 +1,45 @@
+{
+  "evaluated_records": 1232528,
+  "accuracy": 0.7609320031674737,
+  "macro_f1_supported_three_classes": 0.2883045678325286,
+  "per_class": {
+    "BENIGN": {
+      "precision": 0.7609288830506673,
+      "recall": 0.999994668617242,
+      "f1": 0.8642337999589004,
+      "support": 937843
+    },
+    "DDoS": {
+      "precision": 0.0,
+      "recall": 0.0,
+      "f1": 0.0,
+      "support": 200591
+    },
+    "Brute Force": {
+      "precision": 0.8648648648648649,
+      "recall": 0.00034008544646842517,
+      "f1": 0.0006799035386854488,
+      "support": 94094
+    }
+  },
+  "incorrect_port_scan_predictions": 0,
+  "incorrect_port_scan_percentage": 0.0,
+  "true_classes": [
+    "BENIGN",
+    "DDoS",
+    "Brute Force"
+  ],
+  "possible_prediction_classes": [
+    "BENIGN",
+    "DDoS",
+    "Brute Force",
+    "Port Scan"
+  ],
+  "port_scan_ground_truth_available": false,
+  "ground_truth_distribution": {
+    "BENIGN": 937843,
+    "DDoS": 200591,
+    "Brute Force": 94094
+  },
+  "evaluation_scope": "Three supported CSE-CIC-IDS2018 ground-truth classes with all four frozen RF prediction outputs retained."
+}

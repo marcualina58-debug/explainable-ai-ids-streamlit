@@ -1,0 +1,6 @@
+case,true_class,predicted_class,row_index,available
+correct_BENIGN,BENIGN,BENIGN,578089,True
+correct_DDoS,DDoS,DDoS,188469,True
+correct_Brute Force,Brute Force,Brute Force,1535002,True
+correct_Port Scan,Port Scan,Port Scan,317676,True
+benign_to_brute_force,BENIGN,Brute Force,2149841,True
