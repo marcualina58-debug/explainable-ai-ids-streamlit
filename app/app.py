@@ -2,29 +2,27 @@
 
 from __future__ import annotations
 
+import sys
+from pathlib import Path
+
 import pandas as pd
 import streamlit as st
 
-if __package__:
-    from .demo_support import (
-        DemoDataError, FINAL_COMPARISON_CLAIM, PredictionResult, discover_curated_cases, load_curated_case,
-        load_external_validation_results,
-        load_global_explainability_summary,
-        load_json_artifact, load_mlp_model, load_rf_bundle, load_scaler_bundle,
-        lookup_dataset_record, predict_mlp, predict_random_forest, prepare_probability_chart_data, read_config,
-        resolve_demo_dataset, resolve_deployment_mode, validate_cloud_demo_sample,
-        validate_feature_agreement,
-    )
-else:
-    from demo_support import (
-        DemoDataError, FINAL_COMPARISON_CLAIM, PredictionResult, discover_curated_cases, load_curated_case,
-        load_external_validation_results,
-        load_global_explainability_summary,
-        load_json_artifact, load_mlp_model, load_rf_bundle, load_scaler_bundle,
-        lookup_dataset_record, predict_mlp, predict_random_forest, prepare_probability_chart_data, read_config,
-        resolve_demo_dataset, resolve_deployment_mode, validate_cloud_demo_sample,
-        validate_feature_agreement,
-    )
+# Streamlit launches this file from ``app/`` on Community Cloud. Add the
+# repository root so sibling packages such as ``src`` resolve consistently.
+REPOSITORY_ROOT = Path(__file__).resolve().parents[1]
+if str(REPOSITORY_ROOT) not in sys.path:
+    sys.path.insert(0, str(REPOSITORY_ROOT))
+
+from app.demo_support import (
+    DemoDataError, FINAL_COMPARISON_CLAIM, PredictionResult, discover_curated_cases, load_curated_case,
+    load_external_validation_results,
+    load_global_explainability_summary,
+    load_json_artifact, load_mlp_model, load_rf_bundle, load_scaler_bundle,
+    lookup_dataset_record, predict_mlp, predict_random_forest, prepare_probability_chart_data, read_config,
+    resolve_demo_dataset, resolve_deployment_mode, validate_cloud_demo_sample,
+    validate_feature_agreement,
+)
 from src import TARGET_CLASSES
 from src.config import PROJECT_ROOT
 
